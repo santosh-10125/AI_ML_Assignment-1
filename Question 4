@@ -1,0 +1,14 @@
+#(i) WAP to print 100 random strings whose length between 6 and 8
+import random
+import string
+
+# Function to generate a random string of a given length
+def random_string(length):
+    letters = string.ascii_letters  # Uppercase and lowercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Main part of the code
+for _ in range(100):
+    length = random.randint(6, 8)  # Random length between 6 and 8
+    random_string = generate_random_string(length)
+    print(random_string)
